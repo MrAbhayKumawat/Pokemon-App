@@ -18,10 +18,9 @@ function PokemonDetails() {
         setApiData(null);
       }
     };
- 
+
     fetchData();
   }, [location.state]);
-
 
   return (
     <>
@@ -45,8 +44,13 @@ function PokemonDetails() {
                   {apiData.name}
                 </h5>
               </a>
-              <span>Height : </span><strong>{apiData.height}</strong><br/>
-              <div><span>Weight : </span><strong>{apiData.weight}</strong></div>
+              <span>Height : </span>
+              <strong>{apiData.height}</strong>
+              <br />
+              <div>
+                <span>Weight : </span>
+                <strong>{apiData.weight}</strong>
+              </div>
               <div className="flex items-center gap-5">
                 <div>Type:</div>
                 <div className="p-1 w-24 border-2 text-center rounded-3xl bg-green-600 text-white">
@@ -57,8 +61,15 @@ function PokemonDetails() {
             </div>
           </div>
         ) : (
-          <div>
-            <p>No Data Found</p>
+          <div className="flex justify-center items-center">
+            <div>
+              {" "}
+              <div className="w-12 h-12 relative animate-spin border-t-4 border-blue-500 border-solid rounded-full">
+                <div className="w-12 h-12 border-t-4 border-blue-500 border-solid rounded-full absolute top-0 right-0 animate-spin-988"></div>
+                <div className="w-12 h-12 border-t-4 border-blue-500 border-solid rounded-full absolute bottom-0 left-0 animate-spin-988"></div>
+                <div className="w-12 h-12 border-t-4 border-blue-500 border-solid rounded-full absolute top-0 left-0 animate-spin-988"></div>
+              </div>
+            </div>
           </div>
         )}
       </div>

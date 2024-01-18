@@ -114,7 +114,7 @@ function PokemonCard(props) {
         <div className="text-2xl tracking-widest p-5">Filter by types:</div>
         <div className="flex flex-wrap justify-start lg:gap-5 items-center px-10">
           {/* ... (other filter options) */}
-          <div className="flex flex-wrap justify-start gap-5 items-center lg: px-10">
+          <div className="grid lg:grid-cols-10 xl:grid-cols-10 md:grid-cols-5 sm:grid-cols-3 grid-cols-3  lg:gap-5 xl:gap-5 md:gap-5 sm:gap-5 gap-2.5">
             <div
               className="p-2 px-6 border 2 rounded-3xl bg-gray-300 text-black cursor-pointer"
               onClick={() => setFilterquary("Normal")}
@@ -241,7 +241,11 @@ function PokemonCard(props) {
           ))
         ) : (
           <div>
-            <p>No Data Found</p>
+           <div className="w-12 h-12 relative animate-spin border-t-4 border-blue-500 border-solid rounded-full">
+      <div className="w-12 h-12 border-t-4 border-blue-500 border-solid rounded-full absolute top-0 right-0 animate-spin-988"></div>
+      <div className="w-12 h-12 border-t-4 border-blue-500 border-solid rounded-full absolute bottom-0 left-0 animate-spin-988"></div>
+      <div className="w-12 h-12 border-t-4 border-blue-500 border-solid rounded-full absolute top-0 left-0 animate-spin-988"></div>
+    </div>
           </div>
         )}
       </div>
